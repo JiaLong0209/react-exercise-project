@@ -1,0 +1,194 @@
+:root {
+    --box-container-size: 31vw;
+    --box-transition: 0.23s;
+    --box-hover-transition: 0s;
+
+    --logo-width: 6vw;
+    --logo-padding: 1vw;
+    --logo-transition: 0.6s;
+    --logo-hover-transition: 0.0s;
+}
+
+::selection {
+    /*color: red;*/
+    background: #003;
+    border-color: #ccc;
+    box-shadow: 
+        0px 0px 10px 0px #f335,
+        0px 0px 15px 5px #ff3,
+        0px 0px 45px 10px #f355,
+        0px 0px 50px 10px #35f
+        ;
+}
+
+#root {
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.boxContainer{
+    display: flex;
+    /*background: #f352;*/
+    flex-wrap: wrap;
+    width: var(--box-container-size);
+}
+
+
+.box{
+    user-select: none;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 2px; 
+
+    transition: var(--box-transition);
+    background: #222;
+    aspect-ratio : 1 / 1;
+    border-radius: 50%;
+    flex-basis: 29%;
+    color: #aaa;
+    border: #333 solid 3px;
+
+    /*pointer-events: none; */
+}
+
+
+.box:hover{
+    
+    transition: var(--box-hover-transition);
+    background: #222;
+    color: #aaa;
+    border: #fff solid 3vw;
+    box-shadow: 
+        0px 0px 10px 0px #f03,
+        0px 0px 23px 13px #f01,
+        0px 0px 30px 18px #f005,
+        0px 0px 36px 20px #f41a,
+        0px 0px 36px 25px #01fa
+        ;
+}
+
+.box:active{
+    transition: 0.1s;
+    background: #000;
+    border: #222 solid 1px;
+    border-color: #ccc;
+    box-shadow: 
+        0px 0px 10px 0px #3f35,
+        0px 0px 15px 5px #f3f,
+        0px 0px 40px 23px #f83,
+        0px 0px 70px 43px #a00
+        ;
+}
+
+.box:focus{
+    transition: 0.05s;
+    background: #000;
+    border: #222 solid 1px;
+    border-color: #ccc;
+
+    box-shadow: 
+        0px 0px 5px 0px #3f35,
+        0px 0px 10px 2px #f3f,
+        0px 0px 23px 7px #f83,
+        0px 0px 57px 35px #a00
+        ;
+
+    outline: none;
+}
+
+
+/*red */
+.click1{
+    transition: 0s;
+    background: #ddd;
+    color: #222;
+    border-color: #ccc;
+    box-shadow: 
+        0px 0px 10px 0px #f335,
+        0px 0px 15px 5px #ff3,
+        0px 0px 45px 10px #f355,
+        0px 0px 50px 10px #35f
+        ;
+}
+
+/*white*/
+.click2{
+    transition: 0.0s;
+    background: #222;
+    color: #aaa;
+    border: #fff solid 3vw;
+    box-shadow: 
+        0px 0px 10px 0px #f03,
+        0px 0px 23px 13px #f01,
+        0px 0px 30px 18px #f005,
+        0px 0px 36px 20px #f41a,
+        0px 0px 36px 25px #01fa
+        ;
+}
+
+.logo {
+    margin: 14px 0;
+    width: var(--logo-width);
+    padding: var(--logo-padding);
+    transition: var(--logo-transition);
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+    transition: var(--logo-hover-transition);
+    border-radius: 10px;
+    background: #235;
+    color: #222;
+    border-color: #ccc;
+    box-shadow: 
+        0px 0px 10px 0px #f335,
+        0px 0px 15px 5px #ff3,
+        0px 0px 45px 10px #f355,
+        0px 0px 50px 10px #35f
+        ;
+}
+
+
+.logo:active {
+    filter: drop-shadow(0 0 4em 100px #44f);
+    transition: var(--box-hover-transition);
+    background: #222;
+    color: #aaa;
+    box-shadow: 
+        0px 0px 10px 0px #f03,
+        0px 0px 23px 13px #f01,
+        0px 0px 30px 18px #f005,
+        0px 0px 36px 20px #f41a,
+        0px 0px 36px 25px #01fa
+        ;
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a .logo {
+        animation: logo-spin infinite 0.43s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
