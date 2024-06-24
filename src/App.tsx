@@ -1,5 +1,5 @@
-import ReactLogos from './ReactLogos.tsx'
-import BoxContainer from './BoxContainer.tsx'
+import ReactLogos from './components/ReactLogos.tsx'
+import BoxContainer from './components/BoxContainer.tsx'
 import './App.css'
 
 function App() {

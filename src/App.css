@@ -7,6 +7,8 @@
     --logo-padding: 1vw;
     --logo-transition: 0.6s;
     --logo-hover-transition: 0.0s;
+
+    --box-width: 30%;
 }
 
 ::selection {
@@ -51,7 +53,7 @@
     background: #222;
     aspect-ratio : 1 / 1;
     border-radius: 50%;
-    flex-basis: 29%;
+    flex-basis: var(--box-width);
     color: #aaa;
     border: #333 solid 3px;
 
