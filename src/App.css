@@ -8,19 +8,24 @@
     --logo-transition: 0.6s;
     --logo-hover-transition: 0.0s;
 
-    --box-width: 30%;
+    --box-width: 27%;
 }
 
 ::selection {
     /*color: red;*/
     background: #003;
     border-color: #ccc;
-    box-shadow: 
-        0px 0px 10px 0px #f335,
-        0px 0px 15px 5px #ff3,
-        0px 0px 45px 10px #f355,
-        0px 0px 50px 10px #35f
-        ;
+
+    /*box-shadow: */
+    /*    0px 0px 10px 0px #f335,*/
+    /*    0px 0px 15px 5px #ff3,*/
+    /*    0px 0px 45px 10px #f355,*/
+    /*    0px 0px 50px 10px #35f*/
+    /*    ;*/
+}
+
+body{
+    overflow: hidden;
 }
 
 #root {
@@ -47,7 +52,7 @@
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
-    margin: 2px; 
+    margin: 8px; 
 
     transition: var(--box-transition);
     background: #222;
@@ -63,45 +68,40 @@
 
 .box:hover{
     
-    transition: var(--box-hover-transition);
-    background: #222;
-    color: #aaa;
-    border: #fff solid 3vw;
+    transition: var(--box-hover-transition) !important;
+    background: #222 !important;
+    color: #aaa !important;
+    border: #fff solid 2.3vw !important;
     box-shadow: 
         0px 0px 10px 0px #f03,
         0px 0px 23px 13px #f01,
         0px 0px 30px 18px #f005,
         0px 0px 36px 20px #f41a,
-        0px 0px 36px 25px #01fa
-        ;
+        0px 0px 36px 25px #01fa !important;
 }
 
 .box:active{
-    transition: 0.1s;
-    background: #000;
-    border: #222 solid 1px;
-    border-color: #ccc;
+    transition: 0.1s !important;
+    background: #000 !important;
+    border: #222 solid 1px !important;
+    border-color: #ccc !important;
     box-shadow: 
         0px 0px 10px 0px #3f35,
         0px 0px 15px 5px #f3f,
         0px 0px 40px 23px #f83,
-        0px 0px 70px 43px #a00
-        ;
+        0px 0px 70px 43px #a00 !important;
 }
 
 .box:focus{
-    transition: 0.05s;
-    background: #000;
-    border: #222 solid 1px;
-    border-color: #ccc;
-
+    transition: 0.05s !important;
+    background: #000 !important;
+    border: #222 solid 1px !important;
+    border-color: #ccc !important;
     box-shadow: 
         0px 0px 5px 0px #3f35,
         0px 0px 10px 2px #f3f,
         0px 0px 23px 7px #f83,
-        0px 0px 57px 35px #a00
-        ;
-
+        0px 0px 57px 35px #a00 !important;
     outline: none;
 }
 
