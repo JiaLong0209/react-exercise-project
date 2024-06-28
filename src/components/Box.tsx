@@ -26,29 +26,33 @@ function Box(props:IBox){
         props.boxHandler.pushDeleteQueue(props);
     }
 
-
-        //document.activeElement.blur();
-    console.log(`id: ${props.id}, cur: ${props.curLength}`);
-    if(props.boxHandler.getDeleteQueue().length == props.maxLength){
-        console.log(`before: ${props.boxHandler.getDeleteQueue()}`)
-        props.boxHandler.render();
-        console.log(`after: ${props.boxHandler.getDeleteQueue()}`)
-
-    }
-
     console.log(`prev: ${props.boxHandler.getPrevDeleteQueue()}`)
+    console.log(`id: ${props.id}, cur: ${props.curLength}`);
+
     if(props.boxHandler.getPrevDeleteQueue().length == props.maxLength){
+    //if(props.curLength == props.maxLength){
+        //debugger;
         console.log(`Prev Max: ${props.id}`)
-        let index = props.boxHandler.getPrevDeleteQueue().findIndex(i => i == props.id);
+        let index = props.boxHandler.getPrevDeleteQueue().findIndex(i => i === props.id);
 
         setTimeout(() => {
             setIsClick(0);
+            document.activeElement.blur();
         }, props.boxHandler.deleteTimeout * (index + 1));
 
         setTimeout(() => {
             setCanClick(true);
         }, props.boxHandler.deleteTimeout * length);
     }
+
+
+    if(props.boxHandler.getDeleteQueue().length == props.maxLength){
+        console.log(`before: ${props.boxHandler.getDeleteQueue()}`)
+        //props.boxHandler.render();
+        console.log(`after: ${props.boxHandler.getDeleteQueue()} 
+                    cur ${props.curLength}`)
+    }
+
 
     return ( 
         <button style={boxStyle} className="box" onClick={handleClick}>{isClick}</button>
