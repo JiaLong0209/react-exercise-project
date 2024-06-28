@@ -18,6 +18,7 @@ export interface IBox {
     isClick: number,
     boxHandler: IBoxHandler,
     curLength: number,
+    prevDeleteQueue: DeleteQueue,
 }
 
 
